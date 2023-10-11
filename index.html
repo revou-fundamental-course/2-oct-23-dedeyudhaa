@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Suhu</h1>
+        <form id="temperature-converter">
+            <div class="form-group">
+                <label for="fromUnit">Dari :</label>
+                <select id="fromUnit">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                    <option value="reamur">Reamur</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="toUnit">Ke :</label>
+                <select id="toUnit">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                    <option value="reamur">Reamur</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputValue">Masukkan Nilai :</label>
+                <input type="number" id="inputValue" placeholder="Masukkan nilai suhu" required>
+            </div>
+            <div class="form-group">
+                <label for="formula">Penjelasan Rumus :</label>
+                <textarea id="formula" rows="6" readonly></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Konversi</button>
+                <button type="button" id="reset-button">Reset</button>
+                <button type="button" id="reverse-button">Reverse</button>
+            </div>
+        </form>
+        <div id="result" style="display: none;">
+            <h2>Hasil Konversi:</h2>
+            <p id="conversionResult"></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
